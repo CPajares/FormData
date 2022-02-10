@@ -1,4 +1,4 @@
-import { useContext, useEffect, useState } from "react";
+import { useCallback, useContext, useEffect, useState } from "react";
 import FormContext from "../../store/context/formContext";
 import ButtonForm from "../ButtonForm/ButtonForm";
 import HeaderForm from "../HeaderForm/HeaderForm";
@@ -13,19 +13,15 @@ const PersonalDataForm = () => {
 
   const [isDisabled, setIsdisabled] = useState(true);
 
-  useEffect(() => {
-    if (
+  const isFormFull = useCallback(() => {
+    return (
       profileUser.email !== "" &&
       profileUser.name !== "" &&
       profileUser.surname !== "" &&
       profileUser.description !== "" &&
       profileUser.country !== "" &&
       profileUser.city !== ""
-    ) {
-      setIsdisabled(false);
-    } else {
-      setIsdisabled(true);
-    }
+    );
   }, [
     profileUser.city,
     profileUser.country,
@@ -34,6 +30,10 @@ const PersonalDataForm = () => {
     profileUser.name,
     profileUser.surname,
   ]);
+
+  useEffect(() => {
+    isFormFull() ? setIsdisabled(false) : setIsdisabled(true);
+  }, [isFormFull]);
 
   return (
     <>

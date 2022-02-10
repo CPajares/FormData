@@ -1,4 +1,4 @@
-import { useContext, useEffect, useState } from "react";
+import { useCallback, useContext, useEffect, useState } from "react";
 import FormContext from "../../store/context/formContext";
 import ButtonForm from "../ButtonForm/ButtonForm";
 import HeaderForm from "../HeaderForm/HeaderForm";
@@ -25,17 +25,15 @@ const ProfesionalDataForm = () => {
 
   const [isDisabled, setIsdisabled] = useState(true);
 
-  useEffect(() => {
-    if (
-      profileUser.experience !== "" &&
-      profileUser.role !== "" &&
-      skills.length
-    ) {
-      setIsdisabled(false);
-    } else {
-      setIsdisabled(true);
-    }
+  const isFormFull = useCallback(() => {
+    return (
+      profileUser.experience !== "" && profileUser.role !== "" && skills.length
+    );
   }, [profileUser.experience, profileUser.role, skills.length]);
+
+  useEffect(() => {
+    isFormFull() ? setIsdisabled(false) : setIsdisabled(true);
+  }, [isFormFull]);
 
   return (
     <div className="container__profesionalData">
