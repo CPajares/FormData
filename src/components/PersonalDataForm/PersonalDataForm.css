@@ -1,0 +1,41 @@
+.container__personalData {
+  width: 500px;
+  height: 600px;
+  border-left: 4px solid rgb(0, 153, 255);
+  font-size: 18px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.form__personalData {
+  padding: 15px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: flex-end;
+  width: fit-content;
+  height: 100%;
+}
+
+.form__personal-details {
+  display: flex;
+  align-items: flex-start;
+  margin: 10px;
+}
+
+.form__keypad {
+  width: 100%;
+  justify-content: space-around;
+  display: flex;
+}
+.warning-container {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.warning-personal {
+  font-size: 16px;
+}

@@ -1,0 +1,51 @@
+.profileCard {
+  width: 500px;
+  height: 600px;
+  border-left: 4px solid rgb(0, 153, 255);
+  font-size: 18px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.profileCard__main-data {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.skills {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+}
+
+.skill {
+  width: fit-content;
+  padding: 6px 12px;
+  margin: 3px;
+  border-radius: 20px;
+  background-color: rgba(0, 153, 255, 0.452);
+}
+
+.container__list {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  height: 100px;
+}
+
+.profileCard__secondary-data {
+  display: flex;
+  flex-direction: column;
+}
+.description {
+  display: flex;
+  flex-direction: column;
+  padding: 5px;
+}

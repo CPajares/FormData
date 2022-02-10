@@ -1,23 +1,19 @@
-import logo from './logo.svg';
-import './App.css';
+import { useContext } from "react";
+import "./App.css";
+import FrontPage from "./components/FrontPage/FrontPage";
+import PersonalDataForm from "./components/PersonalDataForm/PersonalDataForm";
+import ProfesionalDataForm from "./components/ProfesionalDataForm/ProfesionalDataForm";
+import ProfileCard from "./components/ProfileCard/ProfileCard";
+import FormContext from "./store/context/formContext";
 
 function App() {
+  const { formState } = useContext(FormContext);
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      {formState === 0 && <FrontPage />}
+      {formState === 1 && <PersonalDataForm />}
+      {formState === 2 && <ProfesionalDataForm />}
+      {formState === 3 && <ProfileCard />}
     </div>
   );
 }
