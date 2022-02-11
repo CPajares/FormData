@@ -23,10 +23,10 @@ To build this App have been used the following TECNOLOGIES:
 
 ESTRUCTURE
 
---public:
-|
-|--icons folder
-|--images folder
+> public
+>
+> > icons folder
+> > images folder
 
 --src:
 |
