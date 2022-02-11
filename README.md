@@ -23,15 +23,20 @@ To build this App have been used the following TECNOLOGIES:
 
 ESTRUCTURE
 
---public
---icons folder
---images folder
+--public.
+|
+|--icons folder.
+|--images folder.
 
 --src
---components
+|
+|--components
+|
 --component name folder
+|
 --component-name.js
 --component-name.css
+
 --store
 --context folder
 --context-name.js
