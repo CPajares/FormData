@@ -36,6 +36,7 @@ ESTRUCTURE
 > > > component name folder
 >
 > > > > component-name.js
+>
 > > > > component-name.css
 >
 > > store
@@ -43,6 +44,7 @@ ESTRUCTURE
 > > > context folder
 >
 > > > > context-name.js
+>
 > > > > context-name-provider.js
 >
 > > App.js
