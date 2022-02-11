@@ -26,27 +26,32 @@ ESTRUCTURE
 > public
 >
 > > icons folder
+>
 > > images folder
 
---src:
-|
-|--components
-|----|component name folder
-|-------|component-name.js
-|-------|component-name.css
-|
-|--store
-|----|context folder
-|--------|context-name.js
-|--------|context-name-provider.js
-|
-|--App.js
-|
-|--App.css
-|
-|--index.js
-|
-|--index.css
+> src:
+>
+> > components
+>
+> > > component name folder
+>
+> > > > component-name.js
+> > > > component-name.css
+>
+> > store
+>
+> > > context folder
+>
+> > > > context-name.js
+> > > > context-name-provider.js
+>
+> > App.js
+>
+> > App.css
+>
+> > index.js
+>
+> > index.css
 
 Like it´s a simple App with two forms and a profile, has an easy estructure where we have a two main folders:
 
