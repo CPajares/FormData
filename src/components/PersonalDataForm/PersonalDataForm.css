@@ -1,7 +1,7 @@
 .container__personalData {
   width: 500px;
   height: 600px;
-  border-left: 4px solid rgb(0, 153, 255);
+  border-left: 4px solid var(--main-color);
   font-size: 18px;
   display: flex;
   flex-direction: column;
